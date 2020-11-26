@@ -5,7 +5,14 @@
       <router-link class="item" to="population">全球人口</router-link>
       <router-link class="item" to="volcanoes">火山</router-link>
       <router-link class="item" to="highlight">航线</router-link>
+      <router-link class="item" to="usInter">usInter</router-link>
       <router-link class="item" to="city">全球城市</router-link>
+      <router-link class="item" to="randomPath">随机路径</router-link>
+      <router-link class="item" to="earthquake">地震</router-link>
+      <router-link class="item" to="customlayer">特殊覆盖</router-link>
+      <router-link class="item" to="countryPopulation">countryPopulation</router-link>
+      <router-link class="item" to="customGlobe">customGlobe</router-link>
+      <router-link class="item" to="moon">moon</router-link>
     </div>
     <router-view/>
   </div>

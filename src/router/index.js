@@ -6,6 +6,12 @@ import usInter from '@/components/usInter'
 import volcanoes from '@/components/volcanoes'
 import city from '@/components/city'
 import population from '@/components/population'
+import randomPath from '@/components/randomPath'
+import earthquake from '@/components/earthquake'
+import customlayer from '@/components/customlayer'
+import countryPopulation from '@/components/countryPopulation'
+import customGlobe from '@/components/customGlobe'
+import moon from '@/components/moon'
 
 Vue.use(Router)
 
@@ -40,6 +46,36 @@ export default new Router({
       path: '/population',
       name: 'population',
       component: population
+    },
+    {
+      path: '/randomPath',
+      name: 'randomPath',
+      component: randomPath
+    },
+    {
+      path: '/earthquake',
+      name: 'earthquake',
+      component: earthquake
+    },
+    {
+      path: '/customlayer',
+      name: 'customlayer',
+      component: customlayer
+    },
+    {
+      path: '/countryPopulation',
+      name: 'countryPopulation',
+      component: countryPopulation
+    },
+    {
+      path: '/customGlobe',
+      name: 'customGlobe',
+      component: customGlobe
+    },
+    {
+      path: '/moon',
+      name: 'moon',
+      component: moon
     },
   ]
 })
