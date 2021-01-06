@@ -4,7 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
+
+console.log(location.host)
+const baseUrl = location.host.indexOf('localhost') > -1 ? '../../static' : ''
+Vue.prototype.baseUrl = baseUrl
 
 /* eslint-disable no-new */
 new Vue({

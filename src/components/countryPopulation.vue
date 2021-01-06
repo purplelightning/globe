@@ -34,7 +34,7 @@ export default {
       world.controls().autoRotateSpeed = 1.8;
 
       
-      fetch('../../static/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries => {
+      fetch(this.baseUrl + '/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries => {
         world.polygonsData(countries.features);
 
         setTimeout(() => world

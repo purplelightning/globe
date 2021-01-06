@@ -1,10 +1,15 @@
 // globe.gl 3d地球
 <template>
+<div>
+    <img id="aa" src="../../static/imgs/boat.jpg" />
   <div id="mmm"></div>
+</div>
+
 </template>
 
 <script>
 import Globe from "globe.gl";
+import '../../static/css/a.css'
 
 export default {
   name: "basic",
@@ -24,8 +29,8 @@ export default {
       const labelsTopOrientation = new Set(['Apollo 12', 'Luna 2', 'Luna 20', 'Luna 21', 'Luna 24', 'LCROSS Probe']); // avoid label collisions
 
       const moon = Globe()
-        .globeImageUrl('../../static/datasets/lunar_surface.jpg')
-        .bumpImageUrl('../../static/datasets/lunar_bumpmap.jpg')
+        .globeImageUrl(this.baseUrl+'/datasets/lunar_surface.jpg')
+        .bumpImageUrl(this.baseUrl+'/datasets/lunar_bumpmap.jpg')
         .backgroundImageUrl('http://unpkg.com/three-globe/example/img/night-sky.png')
         .showGraticules(true)
         .showAtmosphere(false) // moon has no atmosphere
@@ -43,7 +48,7 @@ export default {
         .onLabelClick(d => window.open(d.url, '_blank'))
         (dom);
 
-      fetch('../../static/datasets/moon_landings.json').then(r => r.json()).then(landingSites => {
+      fetch(this.baseUrl+ '/datasets/moon_landings.json').then(r => r.json()).then(landingSites => {
         moon.labelsData(landingSites);
       });
     }

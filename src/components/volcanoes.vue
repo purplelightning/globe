@@ -52,7 +52,7 @@ export default {
         .labelLabel(getTooltip)
         (dom);
 
-      fetch('../../static/datasets/world_volcanoes.json').then(res => res.json()).then(volcanoes => {
+      fetch(this.baseUrl + '/datasets/world_volcanoes.json').then(res => res.json()).then(volcanoes => {
         console.log('bbbb')
         myGlobe.pointsData(volcanoes)
           .labelsData(volcanoes);

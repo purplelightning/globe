@@ -33,7 +33,7 @@ export default {
           .hexBinMerge(true)
           .enablePointerInteraction(false); // performance improvement
 
-        fetch('../static/datasets/world_population.csv').then(res => res.text())
+        fetch(this.baseUrl+'/datasets/world_population.csv').then(res => res.text())
           .then(csv => d3.csvParse(csv, ({ lat, lng, pop }) => ({ lat: +lat, lng: +lng, pop: +pop })))
           .then(data => world.hexBinPointsData(data));
 

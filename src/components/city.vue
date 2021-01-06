@@ -12,6 +12,7 @@ export default {
     return {};
   },
   mounted() {
+    console.log(this.baseUrl)
     this.initData();
   },
   methods: {
@@ -20,7 +21,7 @@ export default {
 
       const myGlobe = Globe()
 
-      fetch('../../static/datasets/ne_110m_populated_places_simple.geojson')
+      fetch(this. baseUrl + '/datasets/ne_110m_populated_places_simple.geojson')
       .then(res =>res.json()).then(places => {
         myGlobe.globeImageUrl('http://unpkg.com/three-globe/example/img/earth-night.jpg')
           .backgroundImageUrl('http://unpkg.com/three-globe/example/img/night-sky.png')
